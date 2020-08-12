@@ -1,0 +1,8 @@
+<h1>CHARACTER FORM</h1>
+
+<%= form_with model: @character do |f| %>
+    <%= f.text_field :name %>
+    <%= f.select :skill_class, options_for_select(["Rogue", "Fighter", "Wizard"])  %>
+    <%= f.text_area :backstory, size: "60x12" %>
+    <%= f.submit "Create" %>
+  <% end %>
